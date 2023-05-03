@@ -1,0 +1,547 @@
+*
+    margin: 0
+    padding: 0
+    max-width: 100%
+    box-sizing: border-box
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap')
+    h1
+        font-size: 36px
+        font-weight: 600
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+        @media ( max-width: 768px )
+            font-size: 40px
+        @media ( max-width: 375px )
+            font-size: 30px
+    h2
+        font-size: 72px
+        font-weight: 600
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+        @media ( max-width: 768px )
+            font-size: 28px
+        @media ( max-width: 375px )
+            font-size: 20px
+    h3
+        font-size: 36px
+        font-weight: 600
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+        @media ( max-width: 768px )
+            font-size: 22px
+        @media ( max-width: 375px )
+            font-size: 18px
+    h4
+        font-size: 30px
+        font-weight: 600
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 0.5)
+        @media ( max-width: 768px )
+            font-size: 20px
+        @media ( max-width: 375px )
+            font-size: 16px
+    .text-8xl
+        font-size: clamp(32px, 6.7vw, 96px)
+        line-height: 1
+    .text-7xl
+        font-size: clamp(30px, 5vw, 72px)
+        line-height: 1
+    .text-6xl
+        font-size: clamp(22px, 4.2vw, 60px)
+        line-height: 1
+    .text-5xl
+        font-size: clamp(20px, 3.3vw, 48px)
+        line-height: 1
+    .text-4xl
+        font-size: clamp(18px, 2.5vw, 36px)
+        line-height: 2.5rem
+    .text-3xl
+        font-size: clamp(16px, 2vw, 30px)
+        line-height: 2.25rem
+        font-weight: 600
+    .text-2xl
+        font-size: clamp(16px, 1.7vw, 22px)
+        line-height: 2rem
+        font-weight: 400
+    .text-xl
+        font-size: clamp(16px, 1.4vw, 20px)
+        line-height: 1.75rem
+        font-weight: 400
+    .text-lg
+        font-size: clamp(16px, 1.25vw, 18px)
+        line-height: 1.75rem
+        font-weight: 400
+    .text-base
+        font-size: clamp(16px, 1vw, 16px)
+        line-height: 1.5rem
+        font-weight: 400
+    .color-y
+        color: #f1ce7e
+    .color-w
+        color: #fff
+    .border
+        border-radius: 40px
+        margin: 50px 0 0 0
+        padding: 10px
+        border: 2px solid #fff
+        display: inline-block
+        @media ( max-width: 375px )
+            margin: 20px 0 0 0
+    a
+        text-decoration: none
+        outline: none
+
+@mixin padBig()
+    @media ( max-width: 1200px )
+        @content
+@mixin pad()
+    @media ( max-width: 767px )
+        @content
+@mixin mobile()
+    @media ( max-width: 420px )
+        @content
+@mixin mobileMini()
+    @media ( max-width: 375px )
+        @content
+
+body
+    position: relative
+    scroll-behavior: smooth
+    font-family: 'Open Sans', sans-serif
+    background-color: #177f7c
+    .outerWrap
+        position: relative
+        overflow: hidden
+        .bg
+            position: relative
+            padding: 1% 0
+            &::after
+                content: ''
+                background: url(../img/kv.jpg) top center /cover no-repeat
+                padding: 25% 0
+                height: 100%
+                width: 100%
+                top: 0
+                left: 0
+                position: absolute
+                z-index: -1
+            .banner
+                display: flex
+                justify-content: space-between
+                width: 90%
+                margin: 30px auto 100px
+                @include mobile
+                    margin: 20px auto
+                .logo
+                    @include pad
+                        width: 140px
+                    @include mobile
+                        width: 70px
+                .links
+                    display: flex
+                    align-items: flex-start
+                    @include mobile
+                        display: block
+                    .organized, .implement
+                        margin: 0 20px
+                        @include pad
+                            width: 70px
+                        @include mobile
+                            width: 120px
+                        .badge
+                            padding: 0 0 10px 0
+                            @include pad
+                                font-size: 12px
+                            @include mobile
+                                display: none
+                        .badgeBox
+                            -webkit-box-align: flex-start
+                            align-items: flex-start
+                            display: flex
+                            a
+                                margin: 0 10px 0 0
+            .subtitle
+                width: 90%
+                margin: 0 auto
+                .subtitleBox
+                    position: relative
+                    .subhead
+                        margin: 50px 0 0 0
+                        display: inline-block
+                        border: 2px solid #fff
+                        border-radius: 45px
+                        padding: 10px 20px
+                .date
+                    margin: 80px 0
+                    display: flex
+                    align-items: center
+                    @include padBig
+                        margin: 50px 0 0 0
+                    @include mobile
+                        margin: 20px 0 0 0
+                    .day
+                        margin: 0 40px 0 0
+                        position: relative
+                        &::after
+                            content: ''
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%)
+                            right: -20px
+                            width: 4px
+                            height: 80%
+                            background-color: #fff
+        .form
+            margin: 0 auto
+            font-size: 30px
+            @include padBig
+                font-size: 22px
+            @include mobile
+                margin: 20px 0 0 0
+            .title
+                text-align: center
+                margin: 40px 0
+                @include pad
+                    margin: 20px 0
+            .formBox
+                .type, .course
+                    width: 90%
+                    margin: 0 auto
+                    padding: 20px 0
+                    display: flex
+                    align-items: center
+                    position: relative
+                    @include pad
+                        font-size: 20px
+                    @include mobile
+                        width: 90%
+                        font-size: 12px
+                        padding: 10px 0
+                    &::after
+                        content: ''
+                        position: absolute
+                        width: 100%
+                        height: 1px
+                        background-color: #fff
+                        top: 0
+                        left: 0
+                    .time
+                        width: 20%
+                        text-align: left
+                        padding: 0 0 0 50px
+                        line-height: 1.8
+                        @include padBig
+                            width: 15%
+                            padding: 0
+                        span
+                            position: relative
+                            &::after
+                                content: ''
+                                position: absolute
+                                top: -10px
+                                left: 50%
+                                width: 3px
+                                height: 30%
+                                background-color: #fff
+                                transform: translateX(-50%)
+                    .timecenter
+                        position: relative
+                        top: -80px
+                    .topic
+                        width: 30%
+                        text-align: center
+                        img
+                            width: 30%
+                        @include padBig
+                            width: 50%
+                    .speaker
+                        width: 100%
+                        text-align: left
+                        @include padBig
+                            width: 50%
+                        @include mobile
+                            width: 30%
+                    .topic-wide
+                        width: 70%
+                        @include padBig
+                            width: 50%
+                    .speaker-wide
+                        width: 80%
+                        text-align: center
+                        position: relative
+                        &::before
+                            content: ''
+                            position: absolute
+                            top: 50%
+                            left: 0
+                            width: 1px
+                            height: 110%
+                            background-color: #fff
+                            transform: translateY(-50%)
+                        @include padBig
+                            width: 50%
+                        img
+                            width: 20%
+                .course
+                    &::after
+                        display: none
+                .type-bottom
+                    position: relative
+                    border-bottom: 1px solid #fff
+        .map
+            position: relative
+            margin: 0 auto
+            width: 90%
+            display: flex
+            flex-direction: column
+            @include pad
+                display: block
+            .textBox
+                // position: absolute
+                // top: 50px
+                position: relative
+                top: 0
+                left: 0
+                .add
+                    margin: 50px auto
+                    color: #fff
+                    padding: 0 0 0 50px
+                    position: relative
+                    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5)
+                    &::before
+                        content: ''
+                        position: absolute
+                        top: 50%
+                        transform: translateY(-50%)
+                        left: 10px
+                        width: 5px
+                        height: 90%
+                        background-color: #fff
+                        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.5)
+                    .text-8xl
+                        line-height: 1.2
+                    .text-4xl
+                        line-height: 1.2
+                        padding: 0 0 0 5px
+                        letter-spacing: 0.5px
+                    .text-6xl
+                        line-height: 1.2
+                        letter-spacing: 1px
+            .mapBox
+                position: relative
+                width: 90%
+                margin: 0 auto
+                top: -100px
+                img
+                    width: 100%
+        .trademarks
+            position: relative
+            margin: 0 auto
+            width: 90%
+            display: flex
+            align-items: center
+            justify-content: center
+            flex-wrap: wrap
+            .trademark
+                width: 33%
+                display: flex
+                justify-content: center
+                margin: 80px auto
+                position: relative
+                height: 100px
+                align-items: center
+                @include padBig
+                    margin: 30px auto
+                @include mobile
+                    margin: 0 auto
+                .button
+                    // width: 30%
+                    width: 50%
+                    display: flex
+                    flex-direction: column
+                    @include padBig
+                        width: 80%
+                    @include mobile
+                        width: 80%
+                // .button-s
+                //     width: 20%
+        .twmt
+            position: relative
+            background: url(../img/twmt.jpg)center center / cover no-repeat
+            width: 90%
+            padding: 150px 0
+            margin: 50px auto
+            @include mobile
+                width: 95%
+            .Img
+                position: relative
+                display: flex
+                flex-direction: column
+                align-items: center
+                img
+                    width: 50%
+                    @include padBig
+                        width: 80%
+                    @include mobile
+                        width: 100%
+        .footer
+            position: relative
+            .tree
+                width: 100%
+                img
+                    width: 100%
+            .consult
+                position: absolute
+                top: 40%
+                left: 50%
+                transform: translate(-50%, -50%)
+                .Txt
+                    display: flex
+                    flex-direction: column
+                    padding: 5px
+                    background-color: #212529
+                    color: #fff
+                    border-radius: 25px
+                    text-align: center
+                    margin: 0 auto 40px
+                    width: 90%
+                    @include mobile
+                        padding: 0px
+                        width: 70%
+                        margin: 0 auto 10px
+                .Img
+                    display: flex
+                    flex-direction: column
+                    margin: 0 auto
+                    justify-content: center
+                    width: 90%
+                    @include mobile
+                        width: 60%
+        .overlay
+            position: fixed
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background-color: rgba(0, 0, 0, 0.5)
+            transition: opacity 200ms
+            visibility: hidden
+            opacity: 0
+            .popup
+                position: absolute
+                top: 50%
+                left: 50%
+                transform: translate(-50%, -50%)
+                width: 70%
+                .header
+                    position: relative
+                    margin: 0 auto
+                    width: 100%
+                    height: 30px
+                    box-shadow: 0 1px 1px #f2f2f2
+                    background-color: #242424
+                    .close
+                        position: absolute
+                        width: 30px
+                        height: 30px
+                        top: 0
+                        right: 0
+                        transition: all 200ms
+                        background-color: #242424
+                        &::before, &::after
+                            content: ""
+                            position: absolute
+                            top: 15px
+                            right: 0
+                            width: 30px
+                            height: 2px
+                            background-color: #FFF
+                        &::before
+                            transform: rotate(45deg)
+                        &::after
+                            transform: rotate(-45deg)
+                        &:target
+                            visibility: visible
+                            opacity: 1
+                .wrap
+                    position: relative
+                    margin: 0 auto
+                    width: 100%
+                    background-color: #fff
+                    overflow: scroll
+                    height: 100%
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    @include padBig
+                        padding: 20px 0
+                    @include mobile
+                        height: 520px
+                        padding: 10px
+                    .company
+                        position: absolute
+                        top: 10px
+                        right: 20px
+                        width: 180px
+                        overflow: hidden
+                        @include mobile
+                            width: 20%
+                            right: 5px
+                        img
+                            width: 100%
+                    .company-small
+                        @include mobile
+                            width: 15%
+                    .context
+                        position: relative
+                        margin: 50px 0
+                        align-items: flex-start
+                        display: flex
+                        flex-direction: column
+                        width: 90%
+                        @include padBig
+                            margin: 10px 0
+                        @include mobile
+                            margin: 20px 0
+                        @include mobileMini
+                            margin: 20px 0
+                        .booth
+                            color: #888888
+                        .name
+                            margin: 30px 0
+                            font-weight: bold
+                            @include padBig
+                                margin: 10px 0
+                        .feature
+                            list-style: none
+                            .text-3xl
+                                line-height: 1.5
+                                font-weight: normal
+                                color: #888888
+                    .machine
+                        position: relative
+                        display: flex
+                        flex-direction: row
+                        width: 90%
+                        justify-content: space-between
+                        align-items: center
+                        @include mobile
+                            flex-direction: column
+                        .Img
+                            display: flex
+                            flex-direction: column
+                            width: 25%
+                            @include mobile
+                                flex-direction: row
+                                width: 85%
+                                justify-content: center
+                                margin: 10px auto
+                            .verticalImg
+                                width: 50%
+                                margin: 0 auto
+                        .Img-right
+                            margin-right: 80px
+                            @include mobile
+                                margin-right: auto
+                    .machine-center
+                        justify-content: center
+        .visible  //essential
+            visibility: visible
+            opacity: 1
+            z-index: 1 //to hide menuArea, not essential
