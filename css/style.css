@@ -620,6 +620,12 @@ body .outerWrap .trademarks .trademark {
           align-items: center;
 }
 
+@media (max-width: 1200px) {
+  body .outerWrap .trademarks .trademark {
+    margin: 30px auto;
+  }
+}
+
 @media (max-width: 420px) {
   body .outerWrap .trademarks .trademark {
     margin: 0 auto;
@@ -639,7 +645,7 @@ body .outerWrap .trademarks .trademark .button {
 
 @media (max-width: 1200px) {
   body .outerWrap .trademarks .trademark .button {
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -846,6 +852,12 @@ body .outerWrap .overlay .popup .wrap {
           align-items: center;
 }
 
+@media (max-width: 1200px) {
+  body .outerWrap .overlay .popup .wrap {
+    padding: 20px 0;
+  }
+}
+
 @media (max-width: 420px) {
   body .outerWrap .overlay .popup .wrap {
     height: 520px;
@@ -857,11 +869,24 @@ body .outerWrap .overlay .popup .wrap .company {
   position: absolute;
   top: 10px;
   right: 20px;
+  width: 180px;
+  overflow: hidden;
 }
 
 @media (max-width: 420px) {
   body .outerWrap .overlay .popup .wrap .company {
     width: 20%;
+    right: 5px;
+  }
+}
+
+body .outerWrap .overlay .popup .wrap .company img {
+  width: 100%;
+}
+
+@media (max-width: 420px) {
+  body .outerWrap .overlay .popup .wrap .company-small {
+    width: 15%;
   }
 }
 
@@ -881,9 +906,15 @@ body .outerWrap .overlay .popup .wrap .context {
   width: 90%;
 }
 
+@media (max-width: 1200px) {
+  body .outerWrap .overlay .popup .wrap .context {
+    margin: 10px 0;
+  }
+}
+
 @media (max-width: 420px) {
   body .outerWrap .overlay .popup .wrap .context {
-    margin: 0;
+    margin: 20px 0;
   }
 }
 
@@ -896,9 +927,9 @@ body .outerWrap .overlay .popup .wrap .context .name {
   font-weight: bold;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1200px) {
   body .outerWrap .overlay .popup .wrap .context .name {
-    margin: 15px 0;
+    margin: 10px 0;
   }
 }
 
