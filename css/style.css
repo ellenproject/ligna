@@ -912,7 +912,7 @@ body .outerWrap .overlay .popup .wrap .context {
   }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 375px) {
   body .outerWrap .overlay .popup .wrap .context {
     margin: 20px 0;
   }
